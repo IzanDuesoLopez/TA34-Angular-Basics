@@ -1,0 +1,48 @@
+<div class="container text-center mt-5">
+  <div class="row">
+    <div class="col"></div>
+
+    <div class="col-5">
+      <div class="container text-center">
+        <label for="floatingInput">{{historico}}</label>
+        <div class="calculos shadow mb-5">
+          <input class="inputnums" type="text" value="{{num}}">
+        </div>
+        <div class="numeros shadow">
+          <div class="row">
+            <div class="col">
+              <button (click)="addnum('9')" class="btn" type="submit">9</button>
+              <button (click)="addnum('6')" class="btn" type="submit">6</button>
+              <button (click)="addnum('3')" class="btn" type="submit">3</button>
+              <button (click)="addnum('.')" class="btn" type="submit">.</button>
+            </div>
+            <div class="col">
+              <button (click)="addnum('8')" class="btn" type="submit">8</button>
+              <button (click)="addnum('5')" class="btn" type="submit">5</button>
+              <button (click)="addnum('2')" class="btn" type="submit">2</button>
+              <button (click)="addnum('0')" class="btn" type="submit">0</button>
+            </div>
+            <div class="col">
+              <button (click)="addnum('7')" class="btn" type="submit">7</button>
+              <button (click)="addnum('4')" class="btn" type="submit">4</button>
+              <button (click)="addnum('1')" class="btn" type="submit">1</button>
+              <button (click)="addnum('00')" class="btn" type="submit">00</button>
+            </div>
+            <div class="col coloperaciones">
+              <button (click)="borrar()" class="btn btnoperaciones" type="submit">DEL</button>
+              <button class="btn btnoperaciones" type="submit">/</button>
+              <button class="btn btnoperaciones" type="submit">*</button>
+              <button class="btn btnoperaciones" type="submit">-</button>
+              <button (click)="suma()" class="btn btnoperaciones" type="submit">+</button>
+              <button (click)="igual()" class="btn btnoperaciones" type="submit">=</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col"></div>
+  </div>
+</div>
+<router-outlet></router-outlet>
