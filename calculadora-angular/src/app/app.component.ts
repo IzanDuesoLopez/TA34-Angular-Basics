@@ -26,11 +26,48 @@ export class AppComponent {
     this.lastButton = "suma";
   }
 
+  resta(){
+    this.numAnterior = this.num;
+    this.num = "";
+    this.historico += this.numAnterior + " - ";
+    this.lastButton = "resta";
+  }
+
+  division(){
+    this.numAnterior = this.num;
+    this.num = "";
+    this.resultado = this.numAnterior;
+    this.resultado / parseInt(this.numAnterior);
+    this.historico += this.numAnterior + " / ";
+    this.lastButton = "division";
+  }
+
+  multiplicacion(){
+    this.numAnterior = this.num;
+    this.num = "";
+    this.resultado = this.numAnterior;
+    this.resultado * parseInt(this.numAnterior);
+    this.historico += this.numAnterior + " * ";
+    this.lastButton = "mul";
+  }
+
   igual(){
     switch(this.lastButton){
       case "suma":
         this.historico += this.num + " = ";
         this.resultado += parseInt(this.num);
+        break;
+      case "division":
+        this.historico += this.num + " = ";
+        this.resultado /= parseInt(this.num);
+        break;
+      case "mul":
+        this.historico += this.num + " = ";
+        this.resultado *= parseInt(this.num);
+        break;
+      case "resta":
+        this.historico += this.num + " = ";
+        this.resultado = this.numAnterior - this.num;
         break;
     }
     this.num = this.resultado;
